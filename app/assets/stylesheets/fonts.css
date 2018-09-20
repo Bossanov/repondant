@@ -2,25 +2,25 @@
  * fonts.scss)
  *
  * ------------------------------------------------------------------- */
- 
+
 /*
- * Libre Baskerville 
+ * Libre Baskerville
 ================================================================================ */
 @font-face {
   font-family: "librebaskerville-regular";
-  src: url("../fonts/librebaskerville/librebaskerville-regular-webfont.woff2") format("woff2"), url("../fonts/librebaskerville/librebaskerville-regular-webfont.woff") format("woff");
+  src: url("/assets/librebaskerville/librebaskerville-regular-webfont.woff2") format("woff2"), url("/assets/librebaskerville/librebaskerville-regular-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "librebaskerville-italic";
-  src: url("../fonts/librebaskerville/librebaskerville-italic-webfont.woff2") format("woff2"), url("../fonts/librebaskerville/librebaskerville-italic-webfont.woff") format("woff");
+  src: url("/assets/librebaskerville/librebaskerville-italic-webfont.woff2") format("woff2"), url("/assets/librebaskerville/librebaskerville-italic-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "librebaskerville-bold";
-  src: url("../fonts/librebaskerville/librebaskerville-bold-webfont.woff2") format("woff2"), url("../fonts/librebaskerville/librebaskerville-bold-webfont.woff") format("woff");
+  src: url("/assets/librebaskerville/librebaskerville-bold-webfont.woff2") format("woff2"), url("/assets/librebaskerville/librebaskerville-bold-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
@@ -30,13 +30,13 @@
 ================================================================================ */
 @font-face {
   font-family: "montserrat-regular";
-  src: url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff");
+  src: url("/assets/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("/assets/montserrat/montserrat-regular-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "montserrat-bold";
-  src: url("../fonts/montserrat/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-bold-webfont.woff") format("woff");
+  src: url("/assets/montserrat/montserrat-bold-webfont.woff2") format("woff2"), url("/assets/montserrat/montserrat-bold-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
