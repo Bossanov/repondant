@@ -17,3 +17,5 @@ module Repondant
     # the framework and any gems in your application.
   end
 end
+#config.action_mailer.delivery_method = :postmark
+#config.action_mailer.postmark_settings = { :api_token => "cf0f47a6-85ea-4b5b-a980-86bfe064a006" }
