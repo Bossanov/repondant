@@ -27,7 +27,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -78,13 +78,7 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  Rails.application.configure do
-  # ...
-    config.action_mailer.delivery_method     = :postmark
-    config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
-    config.action_mailer.default_url_options = { host: "yourapp.herokuapp.com" }
-  # or your custom domain name eg. "www.yourdomain.com"
-  end
+
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -96,7 +90,7 @@ Rails.application.configure do
   end
   Rails.application.configure do
     config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { host: "yourapp.herokuapp.com" }
+    config.action_mailer.default_url_options = { host: "repondant.herokuapp.com" }
   # or your custom domain name eg. "www.yourdomain.com"
   end
   # Do not dump schema after migrations.
