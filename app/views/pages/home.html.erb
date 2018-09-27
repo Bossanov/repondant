@@ -1,7 +1,7 @@
 <body id="top">
   <header>
     <div class="header-logo">
-      <a href="index.html">Autisme Info Service</a>
+      <a >Autisme Info Service</a>
     </div>
     <a id="header-menu-trigger" href="#0">
       <span class="header-menu-text">Menu</span>
@@ -18,7 +18,7 @@
       </ul>
       <ul class="header-social-list">
         <li>
-          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="https://twitter.com/AutismeService" target="_blank"><i class="fa fa-twitter"></i></a>
         </li>
       </ul>
     </nav>
@@ -45,7 +45,7 @@
     </div>
     <ul class="home-social-list">
       <li class="animate-intro">
-        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="https://twitter.com/AutismeService" target="_blank"><i class="fa fa-twitter"></i></a>
       </li>
     </ul>
     <div class="scrolldown">
@@ -197,33 +197,16 @@
       <div class="col-seven tab-full animate-this">
 
         <h5>Remplissez le formulaire</h5>
-
+          <% @contact = Contact.new %>
+          <%= simple_form_for @contact do |f|%>
             <!-- form -->
             <form name="contactForm" id="contactForm" method="post">
+              <%= f.input :name, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Nom-Prénom", style:"", label:false, input_html: { class:"form-field"} %>
+              <%= f.input :mail, :required => true, name:"contactEmail", id:"contactEmail", type:"email", placeholder:"E-mail", style:"", label:false, input_html: { class:"form-field"} %>
+              <%= f.input :message, :as => :text, :required => true, name:"contactMessage", id:"contactMessage", type:"email", placeholder:"Lettre de motivation", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
 
                <div class="form-field">
-             <input name="contactName" type="text" id="contactName" placeholder="NOM Prénom" value="" minlength="2" required="">
-               </div>
-
-               <div class="row">
-                  <div class="col-six tab-full">
-                    <div class="form-field">
-                      <input name="contactEmail" type="email" id="contactEmail" placeholder="Votre Email" value="" required="">
-                    </div>
-                </div>
-                <div class="col-six tab-full">
-                  <div class="form-field">
-                    <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="CANDIDATURE">
-                    </div>
-                </div>
-               </div>
-
-               <div class="form-field">
-                  <textarea name="contactMessage" id="contactMessage" placeholder="Lettre de motivation" rows="10" cols="50" required=""></textarea>
-              </div>
-
-               <div class="form-field">
-                  <button class="submitform">Envoyer</button>
+                  <button  class="submitform">Envoyer</button>
 
                   <div id="submit-loader">
                      <div class="text-loader">Envoi en cours...</div>
@@ -236,7 +219,7 @@
                </div>
 
           </form> <!-- end form -->
-
+          <% end %>
             <!-- contact-warning -->
             <div id="message-warning"></div>
 
@@ -303,7 +286,7 @@
 
             <ul class="list-links">
 
-            <li><a href="#">Twitter</a></li>
+            <li><a href="https://twitter.com/AutismeService" target="_blank">Twitter</a></li>
 
           </ul>
 
@@ -314,22 +297,11 @@
             <h4 class="h05">Restons en contact.</h4>
 
             <p>Abonnez vous pour ne rien manquer de notre actualité.</p>
-
-            <div class="subscribe-form">
-
-              <form id="mc-form" class="group" novalidate="true">
-
-              <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="Votre e-mail" required="">
-
-              <!-- <input type="submit" name="subscribe" > -->
-              <button><i class="icon-mail"></i></button>
-
-              <label for="mc-email" class="subscribe-message"></label>
-
-            </form>
-
-            </div>
-
+            <% @contact = Contact.new %>
+            <%= simple_form_for @contact do |f|%>
+              <%= f.input :mail, :required => true, name:"dEmail",  type:"email", placeholder:"E-mail", style:"", label:false, input_html: {  style: "color: blue;" } %>
+              <button type="submit" class="submit">Envoyer</button>
+            <% end %>
           </div> <!-- end footer-subscribe -->
 
         </div> <!-- end row -->
@@ -343,7 +315,7 @@
           <div class="col-twelve">
             <div class="copyright">
               <span>© Autisme Info Service 2018.</span>
-              <span><a href="http://www.styleshout.com/">Mentions légales</a></span>
+              <!-- <span><a href="http://www.styleshout.com/">Mentions légales</a></span> -->
              </div>
           </div>
 
